@@ -32,10 +32,14 @@ html
 				div(class="collapse navbar-collapse", id="navbarNav")
 					if (client)
 						ul(class="navbar-nav mr-auto")
+							//- li(class="nav-item")
+							//- 	a(href="/node-details", class="nav-link")
+							//- 		i(class="fas fa-info-circle")
+							//- 		span  Node Details
 							li(class="nav-item")
-								a(href="/node-details", class="nav-link")
+								a(href="/mempool-summary", class="nav-link")
 									i(class="fas fa-info-circle")
-									span  Node Details
+									span  Mempool Summary
 							li(class="nav-item dropdown")
 								a(class="nav-link dropdown-toggle", href="javascript:void(0)", id="navbarDropdown", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") 
 									i(class="fas fa-cog")
@@ -56,19 +60,19 @@ html
 								span(class="input-group-btn")
 									input(type="submit", class="btn btn-primary", value="Search")
 
-		div(class="container mb-4", style="margin-top: -1.0rem;")
-			ul(class="nav")
-				li(class="nav-item")
-					a(href="/rpc-browser", class="nav-link") RPC Browser
-				li(class="nav-item")
-					a(href="/rpc-terminal", class="nav-link") RPC Terminal
-				li(class="nav-item")
-					a(href="/mempool-summary", class="nav-link") Mempool Summary
-				if (coinConfig.historicalData && coinConfig.historicalData.length > 0)
-					li(class="nav-item")
-						a(href="/fun", class="nav-link") #{coinConfig.name} Fun
+		//- div(class="container mb-4", style="margin-top: -1.0rem;")
+		//- 	ul(class="nav")
+		//- 		li(class="nav-item")
+		//- 			a(href="/rpc-browser", class="nav-link") RPC Browser
+		//- 		li(class="nav-item")
+		//- 			a(href="/rpc-terminal", class="nav-link") RPC Terminal
+		//- 		li(class="nav-item")
+		//- 			a(href="/mempool-summary", class="nav-link") Mempool Summary
+		//- 		if (coinConfig.historicalData && coinConfig.historicalData.length > 0)
+		//- 			li(class="nav-item")
+		//- 				a(href="/fun", class="nav-link") #{coinConfig.name} Fun
 
-			hr
+		//- 	hr
 				
 		div(class="container")
 			if (userMessage)
@@ -88,17 +92,17 @@ html
 							a(href=("https://github.com/janoside/btc-rpc-explorer/commit/" + sourcecodeVersion)) #{sourcecodeVersion}
 							span )
 
-					li Public instance maintained at 
-						a(href="https://btc-explorer.com") https://btc-explorer.com
+					//- li Public instance maintained at 
+					//- 	a(href="https://btc-explorer.com") https://btc-explorer.com
 					
-					li Donate
-						ul
-							li
-								a(href="bitcoin:3NPGpNyLLmVKCEcuipBs7G4KpQJoJXjDGe") BTC
-								span  - 3NPGpNyLLmVKCEcuipBs7G4KpQJoJXjDGe
-							li
-								a(href="litecoin:ME4pXiXuWfEi1ANBDo9irUJVcZBhsTx14i") LTC
-								span  - ME4pXiXuWfEi1ANBDo9irUJVcZBhsTx14i
+					//- li Donate
+					//- 	ul
+					//- 		li
+					//- 			a(href="bitcoin:3NPGpNyLLmVKCEcuipBs7G4KpQJoJXjDGe") BTC
+					//- 			span  - 3NPGpNyLLmVKCEcuipBs7G4KpQJoJXjDGe
+					//- 		li
+					//- 			a(href="litecoin:ME4pXiXuWfEi1ANBDo9irUJVcZBhsTx14i") LTC
+					//- 			span  - ME4pXiXuWfEi1ANBDo9irUJVcZBhsTx14i
 								
 
 					li &copy; 2018 

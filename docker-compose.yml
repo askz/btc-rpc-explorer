@@ -1,0 +1,46 @@
+version: '2.1'
+
+services:
+  komodo_core:
+    networks:
+      - p2p
+      - rpc
+    image: monaize/komodo-ac:latest
+    environment:
+      - AC_NAME=TESTMNZ
+    command:
+      -printtoconsole=1
+      -txindex=1
+      -rpcuser=test
+      -rpcpassword=net
+      -rpcallowip=172.0.0.0/8
+      -rpcport=13353
+      -ac_supply=257142857
+      -addnode=51.15.54.2
+    volumes:
+      - testmonaize-data:/home/komodo/.komodo
+      - zcash-params:/home/komodo/.zcash-params
+  
+  explorer:
+    build: .
+    command: node ./bin/www
+    networks:
+      - rpc
+      - ext
+    ports:
+      - 3002
+    volumes:
+      - explorer-testmonaize-data:/data
+
+volumes:
+  testmonaize-data:
+  testmonaize-peer-data:
+  explorer-testmonaize-data:
+  zcash-params:
+    external: true
+
+networks:
+  ext:
+    external: true
+  p2p:
+  rpc:

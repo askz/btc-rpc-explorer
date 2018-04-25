@@ -1,23 +1,23 @@
 extends layout
 
 block headContent
-	title Home
+	title #{coinConfig.siteTitle}
 	
 block content
-	h1 #{coinConfig.siteTitle}
-	hr
+	//- h1 #{coinConfig.siteTitle}
+	//- hr
 
-	p
-		strong #{coinConfig.siteTitle}
-		span  is 
-		a(href="https://github.com/janoside/btc-rpc-explorer") open-source.
-		span  If you run your own 
-		a(href=coinConfig.nodeUrl) #{coinConfig.name} Full Node
-		span ,
-		strong  #{coinConfig.siteTitle}
-		span  can easily run alongside it, communicating via RPC calls. See the
-		a(href="https://github.com/janoside/btc-rpc-explorer")  project description
-		span  for a list of features and instructions for running.
+	//- p
+	//- 	strong #{coinConfig.siteTitle}
+	//- 	span  is 
+	//- 	a(href="https://github.com/janoside/btc-rpc-explorer") open-source.
+	//- 	span  If you run your own 
+	//- 	a(href=coinConfig.nodeUrl) #{coinConfig.name} Full Node
+	//- 	span ,
+	//- 	strong  #{coinConfig.siteTitle}
+	//- 	span  can easily run alongside it, communicating via RPC calls. See the
+	//- 	a(href="https://github.com/janoside/btc-rpc-explorer")  project description
+	//- 	span  for a list of features and instructions for running.
 
 	
 	if (latestBlocks)

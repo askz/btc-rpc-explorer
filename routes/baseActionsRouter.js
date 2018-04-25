@@ -65,7 +65,7 @@ router.get("/node-details", function(req, res) {
 
 				rpcApi.getNetTotals().then(function(getnettotals) {
 					res.locals.getnettotals = getnettotals;
-
+					console.log(getnettotals)
 					res.render("node-details");
 
 				}).catch(function(err) {

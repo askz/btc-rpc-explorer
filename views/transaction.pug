@@ -74,14 +74,14 @@ block content
 						th(class="table-active properties-header") Version
 						td(class="monospace") #{result.getrawtransaction.version}
 					
-					tr
-						th(class="table-active properties-header") Size
-						td(class="monospace")
-							span #{result.getrawtransaction.size.toLocaleString()} bytes
-							if (result.getrawtransaction.vsize != result.getrawtransaction.size)
-								span  (
-								a(href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki#Transaction_size_calculations") virtual size
-								span : #{result.getrawtransaction.vsize.toLocaleString()} bytes)
+					//- tr
+					//- 	th(class="table-active properties-header") Size
+					//- 	td(class="monospace")
+					//- 		span #{result.getrawtransaction.size.toLocaleString()} bytes
+					//- 		if (result.getrawtransaction.vsize != result.getrawtransaction.size)
+					//- 			span  (
+					//- 			a(href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki#Transaction_size_calculations") virtual size
+					//- 			span : #{result.getrawtransaction.vsize.toLocaleString()} bytes)
 					
 					if (result.getrawtransaction.locktime > 0)
 						tr
@@ -124,8 +124,8 @@ block content
 									include includes/value-display.pug
 								
 								span(class="text-muted")  (#{utils.formatCurrencyAmount(totalInputValue, currencyFormatType)} - #{utils.formatCurrencyAmount(totalOutputValue, currencyFormatType)})
-								br
-								span ~#{new DecimalRounded(totalInputValue).minus(totalOutputValue).dividedBy(result.getrawtransaction.size).times(100000000)} sat/B
+								//- br
+								//- span ~#{new DecimalRounded(totalInputValue).minus(totalOutputValue).dividedBy(result.getrawtransaction.size).times(100000000)} sat/B
 
 				if (result.getrawtransaction.vin[0].coinbase)
 					div(class="card mb-3")
